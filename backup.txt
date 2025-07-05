@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página com Índice, String Única e Dark Mode</title>
+  <style>
+    /* Estilo padrão - modo claro */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #fafafa;
+      color: #222;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav {
+      margin-bottom: 20px;
+      background: #0077cc;
+      padding: 10px 15px;
+      border-radius: 6px;
+      flex-grow: 1;
+      min-width: 250px;
+    }
+    nav a {
+      color: #005fa3;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+      cursor: pointer;
+      margin-right: 15px;
+      display: inline-block;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #0077cc;
+      border-bottom-color: #0077cc;
+      outline: none;
+    }
+    h1 {
+      margin: 0 15px 10px 0;
+      color: #0077cc;
+      flex-shrink: 0;
+    }
+    button#toggle-darkmode {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+    button#toggle-darkmode:hover {
+      background-color: #005fa3;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 5px;
+    }
+    #unique-string {
+      font-family: monospace;
+      background: #222;
+      color: #eee;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      user-select: text;
+      margin-top: 50px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Botões dos links */
+    .link-button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 5px 5px 5px 0;
+      transition: background-color 0.3s;
+      display: inline-block;
+      text-align: center;
+      user-select: none;
+    }
+    .link-button:hover,
+    .link-button:focus {
+      background-color: #005fa3;
+      outline: none;
+    }
+
+    /* Estilo para o modo escuro */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ddd;
+    }
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode nav {
+      color: #80c1ff;
+      border-color: #80c1ff;
+      background-color: #004080;
+    }
+    body.dark-mode nav a {
+      color: #80bfff;
+      border-bottom-color: transparent;
+    }
+    body.dark-mode nav a:hover,
+    body.dark-mode nav a:focus {
+      color: #a0d1ff;
+      border-bottom-color: #a0d1ff;
+    }
+    body.dark-mode #unique-string {
+      background: #333;
+      color: #ddd;
+    }
+    body.dark-mode button#toggle-darkmode {
+      background-color: #80c1ff;
+      color: #121212;
+    }
+    body.dark-mode button#toggle-darkmode:hover {
+      background-color: #a0d1ff;
+    }
+    body.dark-mode .link-button {
+      background-color: #80c1ff;
+      color: #121212;
+    }
+    body.dark-mode .link-button:hover,
+    body.dark-mode .link-button:focus {
+      background-color: #a0d1ff;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+
+  <header>
+    <nav>
+      <a href="#credito">Crédito pessoal</a>
+      <a href="#hospedagem">HOSPEDAGEM DE SITE E VPS</a>
+      <a href="#seg">SEGUROS E CONSÓRCIOS</a>
+      <a href="#cabelo">Cabelo & Calvície</a>
+    </nav>
+    <h1>Entre em contato e aproveite as oportunidades</h1>
+    <button id="toggle-darkmode" aria-label="Alternar modo escuro">Modo Claro</button>
+  </header>
+
+  <main>
+    <section id="credito">
+      <h2>Crédito pessoal</h2>
+      <button class="link-button" data-url="https://geocredibnkvitoria.com/">CONFERIR</button>
+    </section>
+
+    <section id="hospedagem">
+      <h2>HOSPEDAGEM e VPS</h2>
+      <button class="link-button" data-url="https://hostinger.com.br/?REFERRALCODE=1VICTOR444">CONFERIR HOSTINGER</button>
+      <button class="link-button" data-url="https://jogosantigos472302513.wordpress.com/maquinas-vps-temos-todas-as-opcoes-de-maqinas-para-voce/">VPS PROFISSIONAL</button>
+      <button class="link-button" data-url="https://wa.me/5527999860405?text=Olá%2C%20tenho%20interesse%20em%20soluções%20de%20VPS%20e%20ERP.%20Pode%20me%20ajudar%3F">MAIS OPÇÃO DE VPS, HOSPEDAGEM E ERP</button>
+    </section>
+
+    <section id="seg">
+      <h2>SEGUROS E CONSÓRCIOS</h2>
+      <button class="link-button" data-url="https://wa.me/5527999497001?text=ola%20quero%20saber%20sobre%20seguro%20e%20consorcio">CONFERIR</button>
+    </section>
+
+    <section id="cabelo">
+      <h2>Cabelo & Calvície</h2>
+      <button class="link-button" data-url="https://www.larissasaib.com.br/">Tricologia, Transplante Capilar e Medicina Estética</button>
+    </section>
+
+    <div id="unique-string">
+      <!-- String aleatória aparecerá aqui -->
+    </div>
+  </main>
+
+  <script>
+    // Função para gerar string aleatória
+    function gerarStringUnica(tamanho = 150) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*-_=+{}[]<>?';
+      let resultado = '';
+      for (let i = 0; i < tamanho; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return resultado;
+    }
+
+    // Exibe string única ao carregar
+    document.addEventListener('DOMContentLoaded', () => {
+      const uniqueDiv = document.getElementById('unique-string');
+      uniqueDiv.textContent = 'Identificador único:\n' + gerarStringUnica();
+
+      // Adiciona evento para todos os botões de link
+      document.querySelectorAll('.link-button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const url = btn.getAttribute('data-url');
+          window.open(url, '_blank', 'noopener,noreferrer');
+        });
+      });
+    });
+
+    // Botão para alternar dark mode
+    const btnDarkMode = document.getElementById('toggle-darkmode');
+    btnDarkMode.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if(document.body.classList.contains('dark-mode')) {
+        btnDarkMode.textContent = 'Modo Claro';
+      } else {
+        btnDarkMode.textContent = 'Modo Escuro';
+      }
+    });
+  </script>
+
+</body>
+</html>
