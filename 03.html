@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Consórcios e seguros com confiança e agilidade em Vitória - ES. Soluções sob medida para proteger seu patrimônio." />
+  <meta name="keywords" content="consórcio, seguros, Vitória ES, proteção, investimento seguro, consórcio automóvel, consórcio imóvel" />
+  <meta name="author" content="Sua Empresa" />
+  <title>Consórcios & Seguros | Proteção Inteligente em Vitória - ES</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 15px 40px;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+      font-size: 2.6rem;
+      font-weight: bold;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: #0ff;
+      color: #000;
+      font-size: 1.6rem;
+      padding: 18px 50px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px auto 40px;
+      display: inline-block;
+      animation: blink 1.2s infinite;
+      box-shadow: 0 0 25px #0ff;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .cta-button:hover {
+      background-color: #00c9c9;
+      box-shadow: 0 0 35px #00c9c9;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .subtext {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #66ffff;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .news-section {
+      margin-top: 50px;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .news-section h2 {
+      color: #0ff;
+      font-size: 2rem;
+      border-bottom: 2px solid #0ff;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+    }
+
+    .news-item {
+      background: #111;
+      border: 1px solid #0ff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px #0ff33;
+    }
+
+    .news-item h3 {
+      color: #33ffff;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .news-item p {
+      font-size: 1.05rem;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.8rem;
+      color: #444;
+      user-select: none;
+      max-width: 900px;
+      margin: auto;
+      border-top: 1px solid #222;
+      padding-top: 15px;
+      font-family: monospace;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Consórcios & Seguros - Proteção e Tranquilidade em Vitória - ES
+  </header>
+
+  <button class="cta-button" onclick="location.href='index.html'">
+    Faça Sua Simulação Agora!
+  </button>
+
+  <p class="subtext">
+    Proteja o que é seu com planos sob medida. Consórcios para imóveis e veículos. Seguros completos para sua segurança.
+  </p>
+
+  <section class="news-section">
+    <h2>Últimas Notícias de Vitória - ES</h2>
+    <div id="news-container" class="news-item"></div>
+  </section>
+
+  <footer>
+    Soluções completas em consórcio e seguro em Vitória - ES | Código exclusivo: 
+    <span id="codigo-unico"></span>
+  </footer>
+
+  <script>
+    // Lista de notícias sobre consórcios e seguros em Vitória
+    const noticias = [
+      {
+        titulo: "Vitória Registra Aumento na Procura por Consórcios em 2025",
+        texto: "Com as novas taxas competitivas, moradores de Vitória estão aderindo cada vez mais aos consórcios como forma segura de adquirir veículos e imóveis sem juros abusivos."
+      },
+      {
+        titulo: "Seguro Residencial Ganha Força em Vitória com Novo Plano de Cobertura",
+        texto: "Empresas locais lançam pacotes de seguro residencial com preços acessíveis e cobertura completa para enchentes, furtos e danos elétricos, atendendo à crescente demanda na capital capixaba."
+      },
+      {
+        titulo: "Seguradoras Apostam em Tecnologia em Vitória",
+        texto: "Plataformas digitais facilitam a contratação de seguros e consórcios online, atraindo um público mais jovem em busca de agilidade e praticidade na hora de proteger seus bens."
+      }
+    ];
+
+    // Função para mostrar uma notícia aleatória
+    function mostrarNoticiaAleatoria() {
+      const container = document.getElementById('news-container');
+      const index = Math.floor(Math.random() * noticias.length);
+      const noticia = noticias[index];
+      container.innerHTML = `
+        <h3>${noticia.titulo}</h3>
+        <p>${noticia.texto}</p>
+      `;
+    }
+
+    // Função para gerar um código exclusivo com letras, números e caracteres especiais
+    function gerarCodigoUnico(tamanho = 16) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:,.<>?';
+      let resultado = '';
+      for (let i = 0; i < tamanho; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return resultado;
+    }
+
+    // Exibir código exclusivo no carregamento da página
+    function mostrarCodigoUnico() {
+      document.getElementById('codigo-unico').textContent = gerarCodigoUnico(20);
+    }
+
+    // Iniciar funções ao carregar a página
+    window.onload = () => {
+      mostrarNoticiaAleatoria();
+      mostrarCodigoUnico();
+    };
+  </script>
+
+</body>
+</html>
