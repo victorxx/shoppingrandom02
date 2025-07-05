@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Meta para SEO e acessibilidade -->
+  <meta name="description" content="Contrate seu VPS rápido, seguro e confiável. Hospedagem dedicada com alta performance para seu negócio 24/7." />
+  <meta name="keywords" content="VPS, servidor virtual, hospedagem, alta performance, servidor dedicado, Rio de Janeiro, VPS RJ" />
+  <meta name="author" content="Sua Empresa" />
+
+  <title>VPS Noturno | Alta Performance e Segurança no Rio de Janeiro</title>
+
+  <style>
+    /* Estilo escuro (modo noturno) para toda a página */
+    body {
+      background-color: #000; /* Fundo preto */
+      color: #eee; /* Texto claro */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 15px 40px;
+      text-align: center;
+    }
+
+    /* Cabeçalho principal */
+    header {
+      padding: 40px 20px 20px;
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #0ff; /* Ciano brilhante */
+      text-shadow: 0 0 10px #0ff;
+      margin-bottom: 30px;
+    }
+
+    /* Botão de chamada para ação (CTA) */
+    .cta-button {
+      background-color: #0ff;
+      color: #000;
+      font-size: 1.6rem;
+      padding: 18px 50px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px auto 40px;
+      display: inline-block;
+      animation: blink 1.2s infinite;
+      box-shadow: 0 0 25px #0ff;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Efeito hover no botão */
+    .cta-button:hover {
+      background-color: #00c9c9;
+      box-shadow: 0 0 35px #00c9c9;
+    }
+
+    /* Animação piscante do botão */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Subtexto explicativo abaixo do botão */
+    .subtext {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #66ffff;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Seção de notícias */
+    .news-section {
+      margin-top: 50px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    /* Título da seção de notícias */
+    .news-section h2 {
+      color: #0ff;
+      text-shadow: 0 0 8px #0ff;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #0ff;
+      padding-bottom: 8px;
+    }
+
+    /* Bloco de notícia individual */
+    .news-item {
+      background: #111;
+      border: 1px solid #0ff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px #0ff33;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Efeito hover na notícia */
+    .news-item:hover {
+      background-color: #0a0a0a;
+    }
+
+    /* Título da notícia */
+    .news-item h3 {
+      color: #33ffff;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
+    /* Conteúdo da notícia */
+    .news-item p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    /* Rodapé da página */
+    footer {
+      margin-top: 60px;
+      font-size: 0.8rem;
+      color: #444;
+      user-select: none;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      border-top: 1px solid #222;
+      padding-top: 15px;
+      font-family: monospace;
+      letter-spacing: 2px;
+    }
+
+    /* Estilos responsivos para telas pequenas */
+    @media (max-width: 600px) {
+      header {
+        font-size: 2rem;
+      }
+      .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+      }
+      .news-section {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho principal -->
+  <header>
+    VPS Ultra Rápido & Seguro - Seu Servidor 24/7 Online no Rio de Janeiro!
+  </header>
+
+  <!-- Botão com link para index.html -->
+  <button class="cta-button" onclick="location.href='index.html'">
+    Contrate Agora Seu VPS!
+  </button>
+
+  <!-- Subtítulo com garantia -->
+  <p class="subtext">
+    Garantia de alta performance, uptime de 99,99% e suporte dedicado para clientes do Rio de Janeiro.
+  </p>
+
+  <!-- Seção de notícias com container para conteúdo dinâmico -->
+  <section class="news-section" aria-label="Notícias sobre VPS e tecnologia no Rio de Janeiro">
+    <h2>Últimas Notícias para o Rio de Janeiro</h2>
+
+    <div id="news-container" class="news-item">
+      <!-- Notícia aleatória será inserida aqui via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Rodapé com código aleatório gerado dinamicamente -->
+  <footer>
+    VPS premium, servidor virtual dedicado, hospedagem segura, tecnologia de ponta no Rio de Janeiro | Código único: 
+    <span id="codigo-unico"></span>
+  </footer>
+
+  <!-- Scripts para gerar conteúdo dinâmico -->
+  <script>
+    // Lista de notícias disponíveis
+    const noticias = [
+      {
+        titulo: "Internet de Alta Velocidade no RJ Impulsiona Uso de VPS",
+        texto: "Com a expansão da infraestrutura de internet de fibra óptica no Rio de Janeiro, mais empresas estão adotando servidores VPS para garantir escalabilidade e segurança nos seus sistemas. O crescimento tecnológico na cidade estimula a modernização dos serviços digitais e o aumento da demanda por soluções de hospedagem virtual."
+      },
+      {
+        titulo: "Startups Cariocas Escolhem VPS para Crescimento Ágil",
+        texto: "Muitas startups na capital fluminense estão optando por VPS para acelerar seus projetos sem investir em servidores físicos. A flexibilidade e custo-benefício dos servidores virtuais têm sido decisivos para negócios que buscam inovação rápida, mantendo a confiabilidade e suporte técnico local."
+      },
+      {
+        titulo: "Segurança Digital é Prioridade para Empresas do Rio",
+        texto: "Diante do aumento das ameaças cibernéticas, empresas do Rio de Janeiro estão investindo em servidores VPS com proteção reforçada. A segurança é um fator-chave para evitar ataques e garantir a continuidade dos serviços online, protegendo dados sensíveis e clientes."
+      }
+    ];
+
+    // Função que escolhe aleatoriamente uma notícia e exibe no HTML
+    function mostrarNoticiaAleatoria() {
+      const container = document.getElementById('news-container');
+      const index = Math.floor(Math.random() * noticias.length); // Índice aleatório
+      const noticia = noticias[index];
+      container.innerHTML = `
+        <h3>${noticia.titulo}</h3>
+        <p>${noticia.texto}</p>
+      `;
+    }
+
+    // Função que gera um código aleatório com letras, números e caracteres especiais
+    function gerarCodigoUnico(tamanho = 16) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:,.<>?';
+      let resultado = '';
+      for (let i = 0; i < tamanho; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length)); // Seleção aleatória
+      }
+      return resultado;
+    }
+
+    // Função que exibe o código único no rodapé
+    function mostrarCodigoUnico() {
+      const codigoSpan = document.getElementById('codigo-unico');
+      codigoSpan.textContent = gerarCodigoUnico(16); // 16 caracteres por padrão
+    }
+
+    // Ao carregar a página, gera e exibe os conteúdos dinâmicos
+    window.onload = () => {
+      mostrarNoticiaAleatoria();
+      mostrarCodigoUnico();
+    };
+  </script>
+
+</body>
+</html>
